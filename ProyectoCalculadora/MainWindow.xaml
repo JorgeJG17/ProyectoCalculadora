@@ -1,0 +1,60 @@
+﻿<Window x:Class="ProyectoCalculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoCalculadora"
+        mc:Ignorable="d"
+        Title="Calculadora Versión Beta 1.0" Height="600" Width="400">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <!-- Con la propiedad Tag agramos una etiqueta para diferenciar botones-->
+        <Button Grid.Column="3" Grid.Row="1" FontSize="16" Tag="dividir" Click="Button_Operaciones">/</Button>
+        <Button Grid.Column="2" Grid.Row="1" FontSize="16" Tag="borrar" Click="Button_Operaciones">Borrar</Button>
+
+        <Button Grid.Column="0" Grid.Row="2" FontSize="16" Tag="7" Click="Button_Numeros">7</Button>
+        <Button Grid.Column="1" Grid.Row="2" FontSize="16" Tag="8" Click="Button_Numeros">8</Button>
+        <Button Grid.Column="2" Grid.Row="2" FontSize="16" Tag="9" Click="Button_Numeros">9</Button>
+        <Button Grid.Column="3" Grid.Row="2" FontSize="16" Tag="multiplicar" Click="Button_Operaciones">X</Button>
+
+        <Button Grid.Column="0" Grid.Row="3" FontSize="16" Tag="4" Click="Button_Numeros">4</Button>
+        <Button Grid.Column="1" Grid.Row="3" FontSize="16" Tag="5" Click="Button_Numeros">5</Button>
+        <Button Grid.Column="2" Grid.Row="3" FontSize="16" Tag="6" Click="Button_Numeros">6</Button>
+        <Button Grid.Column="3" Grid.Row="3" FontSize="26" Tag="restar" Click="Button_Operaciones">-</Button>
+
+        <Button Grid.Column="0" Grid.Row="4" FontSize="16" Tag="1" Click="Button_Numeros">1</Button>
+        <Button Grid.Column="1" Grid.Row="4" FontSize="16" Tag="2" Click="Button_Numeros">2</Button>
+        <Button Grid.Column="2" Grid.Row="4" FontSize="16" Tag="3" Click="Button_Numeros">3</Button>
+        <Button Grid.Column="3" Grid.Row="4" FontSize="16" Tag="sumar" Click="Button_Operaciones">+</Button>
+
+        <Button Grid.Column="1" Grid.Row="5" FontSize="16" Tag="0" Click="Button_Numeros">0</Button>
+        <Button Grid.Column="3" Grid.Row="5" FontSize="16" Tag="igual" Click="Button_Operaciones">=</Button>
+
+        <TextBlock x:Name="Resultado" Grid.Row="0" VerticalAlignment="Bottom" FontSize="30"
+                   Grid.Column="3" Margin="0,18,20,17" HorizontalAlignment="Right" FlowDirection="RightToLeft">0
+        </TextBlock>
+
+
+
+
+    </Grid>
+</Window>
